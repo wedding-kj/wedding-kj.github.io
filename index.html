@@ -41,13 +41,17 @@
     /* ── SHARED TYPE ── */
     .lbl {
       font-family: 'Jost', sans-serif; font-weight: 200;
-      font-size: 0.68rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-size: 0.82rem; letter-spacing: 0.45em; text-transform: uppercase;
       color: var(--gold); display: block; margin-bottom: 0.9rem;
     }
     .ttl {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.9rem, 5vw, 2.8rem);
       font-weight: 400; line-height: 1.1;
+    }
+    .ttl-rule {
+      width: 52px; height: 1px; margin: 1.1rem auto 0;
+      background: linear-gradient(to right, transparent, rgba(184,146,42,0.45), transparent);
     }
 
     /* ── FLOATING NAV ── */
@@ -76,8 +80,9 @@
       background: rgba(184,146,42,0.22); color: var(--gold-hi);
     }
     @media (max-width: 480px) {
-      .toc { bottom: 1rem; padding: 0.4rem 0.5rem; gap: 0.1rem; max-width: calc(100vw - 2rem); }
-      .toc-item { font-size: 0.5rem; padding: 0.25rem 0.32rem; letter-spacing: 0.04em; }
+      .toc { bottom: 1rem; padding: 0.4rem 0.5rem; gap: 0.1rem; max-width: calc(100vw - 2rem); overflow-x: auto; scrollbar-width: none; }
+      .toc::-webkit-scrollbar { display: none; }
+      .toc-item { font-size: 0.5rem; padding: 0.25rem 0.32rem; letter-spacing: 0.04em; flex-shrink: 0; }
     }
 
     /* ── HERO ── */
@@ -129,7 +134,7 @@
     .rule-line { width: 52px; height: 1px; background: var(--taupe); }
     .rule-diamond { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
     .hero-meta {
-      font-weight: 200; font-size: 0.72rem; letter-spacing: 0.35em;
+      font-weight: 200; font-size: 0.82rem; letter-spacing: 0.35em;
       text-transform: uppercase; color: var(--ink);
       text-shadow: 0 0 16px var(--cream), 0 0 32px var(--cream);
       margin-bottom: 0.5rem;
@@ -181,12 +186,12 @@
     }
     .intro-fleuron { font-size: 1.3rem; color: var(--gold); opacity: 0.45; display: block; margin-bottom: 1.4rem; }
     .intro-label {
-      font-weight: 200; font-size: 0.68rem; letter-spacing: 0.45em;
+      font-weight: 200; font-size: 0.82rem; letter-spacing: 0.45em;
       text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem;
     }
     .intro-text {
       font-family: 'Playfair Display', serif; font-style: normal;
-      font-size: 1.2rem; color: var(--ink); line-height: 1.75;
+      font-size: 1rem; color: var(--ink); line-height: 1.75;
     }
 
     /* ── DIVIDER ── */
@@ -196,7 +201,7 @@
       padding: 0 1.5rem; gap: 1.2rem;
     }
     .divider-line { flex: 1; height: 1px; background: var(--sand); }
-    .divider-icon { color: var(--rose); font-size: 0.85rem; }
+    .divider-icon { color: var(--rose); font-size: 0.82rem; }
 
     /* ── SURVEY ── */
     .survey-wrap {
@@ -204,12 +209,12 @@
     }
     .survey-text { flex: 1; }
     .survey-desc {
-      font-size: 0.9rem; font-weight: 300; color: rgba(242,232,212,0.82);
+      font-size: 0.82rem; font-weight: 300; color: rgba(242,232,212,0.82);
       line-height: 1.75; margin: 1rem 0 1.6rem;
     }
     .survey-btn {
       display: inline-block; font-family: 'Jost', sans-serif;
-      font-size: 0.72rem; font-weight: 400; letter-spacing: 0.2em;
+      font-size: 0.82rem; font-weight: 400; letter-spacing: 0.2em;
       text-transform: uppercase; color: var(--deep);
       background: var(--gold); padding: 0.75rem 1.6rem; border-radius: 1px;
       text-decoration: none; transition: background 0.2s, transform 0.2s;
@@ -240,7 +245,7 @@
     .tl-row.in { opacity: 1; transform: none; }
     .tl-time { padding: 1.3rem 1.4rem 1.3rem 0; text-align: right; line-height: 1; }
     .t-main { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--ink); }
-    .t-end { display: block; font-size: 0.62rem; letter-spacing: 0.06em; color: var(--taupe); margin-top: 3px; }
+    .t-end { display: block; font-size: 0.82rem; letter-spacing: 0.06em; color: var(--taupe); margin-top: 3px; }
     .tl-node { position: relative; width: 1px; display: flex; justify-content: center; padding-top: 1.6rem; z-index: 1; }
     .node-dot {
       width: 7px; height: 7px; border-radius: 50%;
@@ -251,7 +256,7 @@
     .tl-row:last-child .tl-body { border-bottom: none; }
     .tl-act { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--ink); line-height: 1.35; }
     .tl-act em { font-style: normal; color: var(--rose); }
-    .tl-loc { font-size: 0.7rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe); margin-top: 0.25rem; }
+    .tl-loc { font-size: 0.82rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe); margin-top: 0.25rem; }
     .tl-row.now-active .node-dot {
       background: var(--gold); border-color: var(--gold);
       width: 11px; height: 11px; margin-left: -4px;
@@ -283,59 +288,27 @@
       background: linear-gradient(to bottom, rgba(26,26,18,0.15) 0%, rgba(26,26,18,0.6) 100%);
     }
     .location-inner { text-align: center; position: relative; z-index: 1; }
+    .gruss-photo-wrap {
+      display: flex; justify-content: center;
+      background: var(--forest); padding: 2.5rem 1.5rem;
+    }
+    .gruss-photo-wrap .location-photo {
+      width: auto; height: auto;
+      max-height: clamp(180px, 28vw, 300px); max-width: min(320px, 70vw);
+      object-fit: contain; position: static;
+      filter: sepia(80%) brightness(0.52) saturate(1.1) contrast(1.15);
+    }
     .location-address {
       margin-top: 2rem; display: inline-block;
-      border-top: 1px solid rgba(184,146,42,0.2); padding-top: 1.4rem;
+      padding-top: 0.2rem;
       font-size: 0.82rem; font-weight: 300; letter-spacing: 0.18em;
       text-transform: uppercase; color: rgba(242,232,212,0.82); line-height: 2.3;
     }
 
-    /* ── COUPLE PHOTO ── */
-    .couple-section {
-      background: var(--parchment);
-      position: relative; overflow: hidden;
-    }
-    .couple-section::before {
-      content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(to right, transparent, var(--sand) 30%, var(--sand) 70%, transparent);
-    }
-    .couple-inner {
-      max-width: 900px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      align-items: center; gap: 4rem;
-      padding: 5rem 1.5rem 0;
-    }
-    .couple-text { padding-bottom: 5rem; }
-    .couple-text .lbl { color: var(--gold); }
-    .couple-text .ttl { color: var(--ink); margin-bottom: 1.2rem; }
-    .couple-quote {
-      font-family: 'Playfair Display', serif; font-style: normal;
-      font-size: 1.05rem; line-height: 1.8; color: var(--umber);
-    }
-    .couple-photo-wrap {
-      position: relative; align-self: flex-end;
-      /* Fixed height container - image always bottom-anchored */
-      height: 480px;
-    }
-    .couple-photo {
-      position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-      width: auto; height: 100%;
-      object-fit: contain; object-position: bottom center;
-      display: block;
-    }
-    .couple-canvas { display: none; }
-    @media (max-width: 680px) {
-      .couple-inner {
-        grid-template-columns: 1fr; gap: 0;
-        padding: 4rem 1.5rem 0;
-      }
-      .couple-text { padding-bottom: 2rem; text-align: center; }
-      .couple-photo-wrap { height: 320px; width: 100%; }
-    }
+
 
     /* ── HOTELS ── */
-    .hotels-desc { text-align: center; max-width: 420px; margin: 0 auto 3rem; font-size: 0.9rem; color: var(--umber); line-height: 1.7; }
+    .hotels-desc { text-align: center; max-width: 420px; margin: 0 auto 3rem; font-size: 1rem; color: var(--umber); line-height: 1.7; }
     .hotels-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
     .hotel-card {
       display: block; text-decoration: none; color: inherit;
@@ -354,17 +327,17 @@
     .hotel-card.in { opacity: 1; transform: none; }
     .hotel-card:hover { box-shadow: 0 6px 28px rgba(46,32,20,0.1); transform: translateY(-2px); border-color: rgba(184,146,42,0.4); }
     .hotel-card:hover::before { opacity: 0.85; }
-    .hotel-stars { font-size: 0.52rem; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 0.5rem; }
-    .hotel-name { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 400; color: var(--ink); line-height: 1.25; margin-bottom: 0.35rem; }
-    .hotel-sub { font-size: 0.65rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.9rem; }
-    .hotel-tel { font-size: 0.78rem; font-weight: 400; color: var(--umber); letter-spacing: 0.03em; }
-    .hotel-arrow { display: inline-block; font-size: 0.6rem; opacity: 0.55; margin-right: 0.3em; font-style: normal; }
+    .hotel-stars { font-size: 0.82rem; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 0.5rem; }
+    .hotel-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--ink); line-height: 1.25; margin-bottom: 0.35rem; }
+    .hotel-sub { font-size: 0.82rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.9rem; }
+    .hotel-tel { font-size: 0.82rem; font-weight: 400; color: var(--umber); letter-spacing: 0.03em; }
+    .hotel-arrow { display: inline-block; font-size: 0.82rem; opacity: 0.55; margin-right: 0.3em; font-style: normal; }
 
     /* ── GIFTS ── */
     .gifts-inner { max-width: 580px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
     .gifts-text {
       font-family: 'Playfair Display', serif; font-style: normal;
-      font-size: 1.1rem; line-height: 1.85;
+      font-size: 1rem; line-height: 1.85;
       color: rgba(242,232,212,0.82); margin: 2rem 0 2.8rem;
     }
     /* IBAN + QR: single unified card */
@@ -383,9 +356,9 @@
       text-align: left; background: rgba(255,255,255,0.03);
       padding: 1.8rem 2rem;
     }
-    .iban-label { font-family: 'Jost', sans-serif; font-size: 0.6rem; font-weight: 200; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(184,146,42,0.75); margin-bottom: 0.6rem; }
-    .iban-number { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: #f2e8d4; letter-spacing: 0.06em; margin-bottom: 0.55rem; }
-    .iban-meta { font-family: 'Jost', sans-serif; font-size: 0.68rem; font-weight: 300; color: rgba(242,232,212,0.6); letter-spacing: 0.08em; }
+    .iban-label { font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 200; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(184,146,42,0.75); margin-bottom: 0.6rem; }
+    .iban-number { font-family: 'Playfair Display', serif; font-size: 1rem; color: #f2e8d4; letter-spacing: 0.06em; margin-bottom: 0.55rem; }
+    .iban-meta { font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 300; color: rgba(242,232,212,0.6); letter-spacing: 0.08em; }
     .qr-divider { width: 1px; background: rgba(184,146,42,0.15); flex-shrink: 0; }
     .qr-wrap {
       display: flex; flex-direction: column; align-items: center;
@@ -400,7 +373,7 @@
     }
     .qr-box canvas, .qr-box img { width: 100% !important; height: 100% !important; }
     .qr-hint {
-      font-family: 'Jost', sans-serif; font-size: 0.58rem; font-weight: 200;
+      font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 200;
       letter-spacing: 0.22em; text-transform: uppercase; color: rgba(184,146,42,0.6);
     }
 
@@ -423,7 +396,7 @@
     }
     .note-body { flex: 1; }
     .note-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--ink); margin-bottom: 0.4rem; }
-    .note-desc { font-size: 0.88rem; font-weight: 300; color: var(--umber); line-height: 1.75; }
+    .note-desc { font-size: 1rem; font-weight: 300; color: var(--umber); line-height: 1.75; }
     .note-desc a { color: var(--umber); text-decoration: none; border-bottom: 1px solid rgba(122,92,58,0.3); transition: color 0.2s, border-color 0.2s; }
     .note-desc a:hover { color: var(--gold); border-color: var(--gold); }
 
@@ -449,7 +422,7 @@
       text-shadow: 0 1px 0 rgba(247,240,227,0.9);
     }
     .cd-label {
-      font-family: 'Jost', sans-serif; font-size: 0.58rem; font-weight: 200;
+      font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 200;
       letter-spacing: 0.3em; text-transform: uppercase;
       color: var(--taupe); margin-top: 0.4rem;
     }
@@ -461,14 +434,14 @@
     }
     .countdown-done {
       font-family: 'Playfair Display', serif; font-style: normal;
-      font-size: 1.2rem; color: var(--rose); margin-top: 2rem;
+      font-size: 1rem; color: var(--rose); margin-top: 2rem;
     }
 
     /* ── FOOTER ── */
     footer { background: var(--deep); text-align: center; padding: 4rem 1.5rem 5rem; position: relative; }
     footer::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 72px; height: 1px; background: rgba(184,146,42,0.35); }
     .footer-mono { font-family: 'Playfair Display', serif; font-style: normal; font-size: 2.2rem; color: rgba(184,146,42,0.4); margin-bottom: 0.8rem; }
-    .footer-sub { font-family: 'Jost', sans-serif; font-size: 0.65rem; font-weight: 200; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(185,160,128,0.28); }
+    .footer-sub { font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 200; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(185,160,128,0.28); }
 
     /* ── ANIMATIONS ── */
     @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -483,16 +456,16 @@
       .tl::before { left: 72px; }
       .tl-row { grid-template-columns: 72px 1px 1fr; }
       .tl-time { padding: 1rem 1rem 1rem 0; }
-      .t-main { font-size: 0.9rem; }
+      .t-main { font-size: 1rem; }
       .tl-body { padding: 0.95rem 0 0.95rem 1.3rem; }
-      .tl-act { font-size: 0.95rem; }
+      .tl-act { font-size: 1rem; }
       .hotels-grid { gap: 0.85rem; }
       .hotel-card { padding: 1.2rem 1rem 1rem; }
-      .hotel-name { font-size: 0.88rem; }
-      .hotel-tel { font-size: 0.72rem; }
+      .hotel-name { font-size: 1rem; }
+      .hotel-tel { font-size: 0.82rem; }
       .iban-qr-wrap { flex-direction: column; width: 100%; }
       .iban-card { padding: 1.4rem 1.4rem; }
-      .iban-number { font-size: 0.9rem; letter-spacing: 0.03em; }
+      .iban-number { font-size: 1rem; letter-spacing: 0.03em; }
       .qr-divider { width: 100%; height: 1px; }
       .qr-wrap { padding: 1.4rem; }
       .survey-wrap { flex-direction: column; gap: 1.8rem; align-items: flex-start; }
@@ -511,6 +484,7 @@
     <a class="toc-item" href="#hotels">Hotels</a>
     <a class="toc-item" href="#geschenke">Geschenke</a>
     <a class="toc-item" href="#hinweise">Hinweise</a>
+    <a class="toc-item" href="#gruss">Gruß</a>
   </nav>
 
   <!-- HERO: illustration fixed-width, never stretches -->
@@ -520,14 +494,19 @@
       alt="Herrenhaus Höltigbaum Illustration" />
     <div class="hero-overlay"></div>
     <div class="hero-text">
+      <br>
       <p class="hero-eyebrow">Wir heiraten!</p>
+      <br>
       <h1 class="hero-names">Kimberley <span class="amp">&</span> Jan</h1>
+      <br>
       <div class="hero-rule">
         <div class="rule-line"></div>
         <div class="rule-diamond"></div>
         <div class="rule-line"></div>
       </div>
+      <br>
       <p class="hero-eyebrow">01. August 2026<br>Herrenhaus Höltigbaum</p>
+      <br>
       <div class="countdown-wrap" id="countdown">
         <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-label">Tage</span></div>
         <div class="cd-sep">·</div>
@@ -557,6 +536,7 @@ Ein Versprechen
       <div class="gifts-inner">
         <span class="lbl">Bitte ausfüllen</span>
         <h2 class="ttl">Eure Rückmeldung</h2>
+        <div class="ttl-rule"></div>
         <p class="gifts-text">Damit wir alles perfekt für euch vorbereiten können, bitten wir euch herzlich, unsere kurze Umfrage auszufüllen.</p>
         <div class="iban-qr-wrap">
           <div class="iban-card" style="text-align:center; align-items:center; gap:0.9rem;">
@@ -564,7 +544,7 @@ Ein Versprechen
             <p style="font-family:'Jost',sans-serif; font-size:0.82rem; font-weight:300; color:rgba(242,232,212,0.82); line-height:1.7;">Zusage, Begleitung &amp; Essenspräferenzen</p>
             <a href="https://forms.gle/XkMVx8kWd39TEDrQ8" target="_blank" rel="noopener"
               style="display:inline-block; margin-top:0.4rem;
-                     font-family:'Jost',sans-serif; font-size:0.7rem; font-weight:400;
+                     font-family:'Jost',sans-serif; font-size:0.82rem; font-weight:400;
                      letter-spacing:0.22em; text-transform:uppercase;
                      color:#1c1208; background:#b8922a;
                      padding:0.75rem 1.6rem; border-radius:1px; text-decoration:none;">
@@ -574,7 +554,6 @@ Ein Versprechen
           <div class="qr-divider"></div>
           <div class="qr-wrap">
             <div class="qr-box" id="qr-survey" style="background:transparent;"></div>
-            <span class="qr-hint">Zum Scannen</span>
           </div>
         </div>
       </div>
@@ -585,8 +564,9 @@ Ein Versprechen
   <div class="section-light" id="ablauf">
     <div class="agenda-wrap">
       <div class="agenda-header">
-        <span class="lbl">Tagesablauf</span>
-        <h2 class="ttl" style="color:var(--ink);">Der Ablauf</h2>
+        <span class="lbl">Vom Ja-Wort bis zur Party</span>
+        <h2 class="ttl" style="color:var(--ink);">Tagesablauf</h2>
+        <div class="ttl-rule"></div>
       </div>
       <div class="tl" id="tl">
         <div class="tl-row">
@@ -648,35 +628,25 @@ Ein Versprechen
       <div class="location-inner">
         <span class="lbl">Unsere Location</span>
         <h2 class="ttl">Herrenhaus Höltigbaum</h2>
+        <div class="ttl-rule"></div>
         <p class="location-address">
           Sieker Landstraße 119<br>
           22143 Hamburg · Hamburg-Rahlstedt
         </p>
-        <p style="font-size:0.82rem; font-weight:300; line-height:1.85; color:rgba(242,232,212,0.72); max-width:480px; margin:1.8rem auto 0; letter-spacing:0.02em;">
-          Ein Ort mit Geschichte für unseren gemeinsamen Anfang. Das Herrenhaus Höltigbaum ist ein denkmalgeschütztes Gutshaus aus dem 18. Jahrhundert, eingebettet in den gleichnamigen Landschaftsschutzpark am östlichen Stadtrand Hamburgs. Wir freuen uns riesig darauf, hier mit euch die Korken knallen zu lassen und eine unvergessliche Party zu feiern!
+        <p style="font-size:1rem; font-weight:300; line-height:1.85; color:rgba(242,232,212,0.72); max-width:480px; margin:1.8rem auto 0; letter-spacing:0.02em;">
+          Historisch, hanseatisch, High-End-Party! Wir entführen euch ins Herrenhaus Höltigbaum. Ein denkmalgeschütztes Juwel aus dem 18. Jahrhundert, umgeben von herrlicher Natur – und der perfekte Ort, um es so richtig krachen zu lassen. Macht euch bereit für ein Fest im Grünen, bei dem kein Glas trocken und kein Fuß still bleibt!
         </p>
         <p style="margin-top:1.4rem; display:flex; justify-content:center; gap:1.4rem; flex-wrap:wrap;">
           <a href="https://www.giffey.de/Locations/Herrenhaus-Hoeltigbaum" target="_blank" rel="noopener"
-             style="font-family:'Jost',sans-serif; font-size:0.65rem; font-weight:300; letter-spacing:0.2em; text-transform:uppercase; color:rgba(184,146,42,0.9); text-decoration:none; border-bottom:1px solid rgba(184,146,42,0.35); padding-bottom:2px; transition:color 0.2s;">Website &#x2197;</a>
+             style="font-family:'Jost',sans-serif; font-size:0.82rem; font-weight:300; letter-spacing:0.2em; text-transform:uppercase; color:rgba(184,146,42,0.9); text-decoration:none; border-bottom:1px solid rgba(184,146,42,0.35); padding-bottom:2px; transition:color 0.2s;">Website &#x2197;</a>
           <a href="https://de.wikipedia.org/wiki/Herrenhaus_H%C3%B6ltigbaum" target="_blank" rel="noopener"
-             style="font-family:'Jost',sans-serif; font-size:0.65rem; font-weight:300; letter-spacing:0.2em; text-transform:uppercase; color:rgba(184,146,42,0.9); text-decoration:none; border-bottom:1px solid rgba(184,146,42,0.35); padding-bottom:2px; transition:color 0.2s;">Wikipedia &#x2197;</a>
+             style="font-family:'Jost',sans-serif; font-size:0.82rem; font-weight:300; letter-spacing:0.2em; text-transform:uppercase; color:rgba(184,146,42,0.9); text-decoration:none; border-bottom:1px solid rgba(184,146,42,0.35); padding-bottom:2px; transition:color 0.2s;">Wikipedia &#x2197;</a>
         </p>
       </div>
     </div>
   </div>
 
-  <!-- COUPLE PHOTO -->
-  <section class="couple-section">
-    <div class="couple-inner">
-      <div class="couple-text">
-        <h2 class="ttl">Wir freuen uns auf euch!</h2>
-        <p class="couple-quote">Jeder Einzelne von euch gehört zu der Geschichte, die uns hierher geführt hat, und wir sind unendlich dankbar, euch in unserem Leben zu haben. Dass ihr diesen Tag mit uns feiert, bedeutet uns mehr, als Worte sagen können.</p>
-      </div>
-      <div class="couple-photo-wrap">
-        <img class="couple-photo" id="couple-src" src="couple.png" alt="Wir zwei">
-      </div>
-    </div>
-  </section>
+
 
   <!-- HOTELS -->
   <section class="section-light" id="hotels">
@@ -684,6 +654,8 @@ Ein Versprechen
       <div class="section-header">
         <span class="lbl" style="color:var(--gold);">Für Gäste mit Anreise</span>
         <h2 class="ttl" style="color:var(--ink);">Hotelempfehlungen</h2>
+        <div class="ttl-rule"></div>
+        <br>
         <p class="hotels-desc">Empfehlenswerte Unterkünfte in der Nähe des Herrenhauses.</p>
       </div>
       <div class="hotels-grid">
@@ -721,6 +693,7 @@ Ein Versprechen
       <div class="gifts-inner">
         <span class="lbl">Ein Wunsch von uns</span>
         <h2 class="ttl">Geschenke</h2>
+        <div class="ttl-rule"></div>
         <p class="gifts-text">Am meisten freuen wir uns über eure Anwesenheit, aber wer uns darüber hinaus eine kleine Freude bereiten möchte: Wir sparen bereits fleißig auf unsere Feier und die Hochzeitsreise und freuen uns riesig über einen Beitrag. Ganz klassisch als Karte vor Ort oder für den sicheren Hafen per Überweisung auf unser Hochzeitskonto – wir danken euch von Herzen!
         <br>
         
@@ -733,7 +706,6 @@ Ein Versprechen
           <div class="qr-divider"></div>
           <div class="qr-wrap">
             <div class="qr-box" id="qr-code" style="background:transparent;"></div>
-            <span class="qr-hint">Zum Scannen</span>
           </div>
         </div>
       </div>
@@ -744,8 +716,9 @@ Ein Versprechen
   <section class="section-parchment" id="hinweise">
     <div class="section-inner">
       <div class="section-header">
-        <span class="lbl" style="color:var(--gold);">Praktisches</span>
+        <span class="lbl" style="color:var(--gold);">Good to know</span>
         <h2 class="ttl" style="color:var(--ink);">Hinweise</h2>
+        <div class="ttl-rule"></div>
       </div>
 
       <div class="note-item">
@@ -795,7 +768,6 @@ Ein Versprechen
             <span style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:0.4rem;margin-top:0.3rem;">
               <span style="display:flex;align-items:center;gap:0.8rem;">
                 <span id="qr-drive-box" style="display:inline-block;background:transparent;padding:0;line-height:0;"></span>
-                <span style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--taupe);">Zum Scannen</span>
               </span>
             </span>
             <br>Die offiziellen Fotos werden im Nachgang separat bereitgestellt.
@@ -815,6 +787,24 @@ Ein Versprechen
       </div>
     </div>
   </section>
+
+  <!-- GRUSS -->
+  <div class="section-dark" id="gruss">
+    <div class="gruss-photo-wrap">
+      <img class="location-photo" src="couple.png" style="text-align:center; padding-top: 2rem;" alt="Kimberley &amp; Jan" />
+      <div class="location-photo-overlay"></div>
+    </div>
+    <div class="section-inner" style="text-align:center; padding-top: 0%; padding-bottom:5rem;">
+      <div class="location-inner">
+        <span class="lbl">Gruß & bis bald</span>
+        <h2 class="ttl">Wir freuen uns auf euch!</h2>
+        <div class="ttl-rule"></div>
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; font-weight:400; line-height:1.85; color:rgba(242,232,212,0.82); max-width:480px; margin:1.8rem auto 0;">
+          Jeder Einzelne von euch gehört zu der Geschichte, die uns hierher geführt hat, und wir sind unendlich dankbar, euch in unserem Leben zu haben. Dass ihr diesen Tag mit uns feiert, bedeutet uns mehr, als Worte sagen können!
+        </p>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -875,7 +865,7 @@ Ein Versprechen
 
     // Floating nav visibility
     const toc = document.getElementById('toc');
-    const sections = ['hero','umfrage','ablauf','location','hotels','geschenke','hinweise'];
+    const sections = ['hero','umfrage','ablauf','location','hotels','geschenke','hinweise','gruss'];
     const tocItems = toc.querySelectorAll('.toc-item');
     const heroEl = document.getElementById('hero');
     new IntersectionObserver(([e]) => {
@@ -963,72 +953,6 @@ Ein Versprechen
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
-    // ── COUPLE PHOTO: Canvas-based black bg removal + strong sepia ──
-    const coupleImg = document.getElementById('couple-src');
-    const coupleCanvas = document.getElementById('couple-canvas');
-    function processCouplePhoto() {
-      const w = coupleImg.naturalWidth, h = coupleImg.naturalHeight;
-      const tmp = document.createElement('canvas');
-      tmp.width = w; tmp.height = h;
-      const ctx = tmp.getContext('2d');
-      ctx.drawImage(coupleImg, 0, 0);
-      const id = ctx.getImageData(0, 0, w, h);
-      const d = id.data;
-
-      // BFS flood-fill from edges - 2 passes with increasing tolerance
-      const isBg = new Uint8Array(w * h);
-      function runBFS(thresh, satThresh) {
-        const visited = new Uint8Array(w * h);
-        const queue = [];
-        function pixBg(i) {
-          const r=d[i*4],g=d[i*4+1],b=d[i*4+2];
-          return (r+g+b)/3 < thresh && Math.max(r,g,b)-Math.min(r,g,b) < satThresh;
-        }
-        function seed(y,x) {
-          const i=y*w+x;
-          if(!visited[i] && pixBg(i)){ visited[i]=1; queue.push(i); }
-        }
-        for(let x=0;x<w;x++){ seed(0,x); seed(h-1,x); }
-        for(let y=0;y<h;y++){ seed(y,0); seed(y,w-1); }
-        // Also seed from already-known bg pixels (second pass expansion)
-        for(let i=0;i<w*h;i++){ if(isBg[i]){ visited[i]=1; queue.push(i); } }
-        let qi=0;
-        while(qi<queue.length){
-          const i=queue[qi++];
-          isBg[i]=1;
-          const y=Math.floor(i/w), x=i%w;
-          [[y-1,x],[y+1,x],[y,x-1],[y,x+1],[y-1,x-1],[y-1,x+1],[y+1,x-1],[y+1,x+1]].forEach(([ny,nx])=>{
-            if(ny>=0&&ny<h&&nx>=0&&nx<w){
-              const ni=ny*w+nx;
-              if(!visited[ni]&&pixBg(ni)){ visited[ni]=1; queue.push(ni); }
-            }
-          });
-        }
-      }
-      runBFS(20, 10);  // tight first pass
-      runBFS(32, 18);  // slightly wider second pass from expanded bg
-
-      // Apply: bg → transparent; fg → sepia boost
-      for(let i=0;i<w*h;i++){
-        const pi=i*4;
-        if(isBg[i]){ d[pi+3]=0; continue; }
-        // Strong sepia
-        const r=d[pi],g=d[pi+1],b=d[pi+2];
-        const gray=0.299*r+0.587*g+0.114*b;
-        d[pi]   = Math.min(255, gray*1.0 + 80);  // warm red
-        d[pi+1] = Math.min(255, gray*0.88 + 48); // warm green
-        d[pi+2] = Math.min(255, gray*0.72 + 20); // cool blue down
-      }
-
-      coupleCanvas.width = w; coupleCanvas.height = h;
-      coupleCanvas.getContext('2d').putImageData(id, 0, 0);
-    }
-    if(coupleImg.complete && coupleImg.naturalWidth) {
-      processCouplePhoto();
-    } else {
-      coupleImg.onload = processCouplePhoto;
-    }
   </script>
 </body>
 </html>
