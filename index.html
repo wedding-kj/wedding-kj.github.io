@@ -204,7 +204,7 @@
     }
     .survey-text { flex: 1; }
     .survey-desc {
-      font-size: 0.9rem; font-weight: 300; color: rgba(242,232,212,0.65);
+      font-size: 0.9rem; font-weight: 300; color: rgba(242,232,212,0.82);
       line-height: 1.75; margin: 1rem 0 1.6rem;
     }
     .survey-btn {
@@ -287,7 +287,7 @@
       margin-top: 2rem; display: inline-block;
       border-top: 1px solid rgba(184,146,42,0.2); padding-top: 1.4rem;
       font-size: 0.82rem; font-weight: 300; letter-spacing: 0.18em;
-      text-transform: uppercase; color: rgba(242,232,212,0.6); line-height: 2.3;
+      text-transform: uppercase; color: rgba(242,232,212,0.82); line-height: 2.3;
     }
 
     /* ── COUPLE PHOTO ── */
@@ -335,7 +335,7 @@
     }
 
     /* ── HOTELS ── */
-    .hotels-desc { text-align: center; max-width: 420px; margin: 0 auto 3rem; font-size: 0.9rem; color: var(--taupe); line-height: 1.7; }
+    .hotels-desc { text-align: center; max-width: 420px; margin: 0 auto 3rem; font-size: 0.9rem; color: var(--umber); line-height: 1.7; }
     .hotels-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
     .hotel-card {
       display: block; text-decoration: none; color: inherit;
@@ -358,7 +358,7 @@
     .hotel-name { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 400; color: var(--ink); line-height: 1.25; margin-bottom: 0.35rem; }
     .hotel-sub { font-size: 0.65rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.9rem; }
     .hotel-tel { font-size: 0.78rem; font-weight: 400; color: var(--umber); letter-spacing: 0.03em; }
-    .hotel-tel::before { content: '↗ '; font-size: 0.62rem; opacity: 0.55; }
+    .hotel-arrow { display: inline-block; font-size: 0.6rem; opacity: 0.55; margin-right: 0.3em; font-style: normal; }
 
     /* ── GIFTS ── */
     .gifts-inner { max-width: 580px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
@@ -383,9 +383,9 @@
       text-align: left; background: rgba(255,255,255,0.03);
       padding: 1.8rem 2rem;
     }
-    .iban-label { font-family: 'Jost', sans-serif; font-size: 0.6rem; font-weight: 200; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(184,146,42,0.55); margin-bottom: 0.6rem; }
+    .iban-label { font-family: 'Jost', sans-serif; font-size: 0.6rem; font-weight: 200; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(184,146,42,0.75); margin-bottom: 0.6rem; }
     .iban-number { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: #f2e8d4; letter-spacing: 0.06em; margin-bottom: 0.55rem; }
-    .iban-meta { font-family: 'Jost', sans-serif; font-size: 0.68rem; font-weight: 300; color: rgba(242,232,212,0.38); letter-spacing: 0.08em; }
+    .iban-meta { font-family: 'Jost', sans-serif; font-size: 0.68rem; font-weight: 300; color: rgba(242,232,212,0.6); letter-spacing: 0.08em; }
     .qr-divider { width: 1px; background: rgba(184,146,42,0.15); flex-shrink: 0; }
     .qr-wrap {
       display: flex; flex-direction: column; align-items: center;
@@ -401,7 +401,7 @@
     .qr-box canvas, .qr-box img { width: 100% !important; height: 100% !important; }
     .qr-hint {
       font-family: 'Jost', sans-serif; font-size: 0.58rem; font-weight: 200;
-      letter-spacing: 0.22em; text-transform: uppercase; color: rgba(184,146,42,0.4);
+      letter-spacing: 0.22em; text-transform: uppercase; color: rgba(184,146,42,0.6);
     }
 
     /* ── NOTES ── */
@@ -419,6 +419,7 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 0.95rem; flex-shrink: 0;
       box-shadow: 0 2px 8px rgba(46,32,20,0.06);
+      filter: sepia(0.8) saturate(0.4) brightness(0.95);
     }
     .note-body { flex: 1; }
     .note-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--ink); margin-bottom: 0.4rem; }
@@ -428,12 +429,17 @@
 
     /* ── COUNTDOWN ── */
     .countdown-wrap {
-      display: flex; gap: 1.5rem; justify-content: center;
+      display: flex; gap: 0.7rem; justify-content: center;
       margin-top: 1rem;
+    }
+    @media (max-width: 480px) {
+      .countdown-wrap { gap: 0.35rem; }
+      .cd-sep { font-size: 1.4rem; }
+      .cd-unit { min-width: 40px; }
     }
     .cd-unit {
       display: flex; flex-direction: column; align-items: center;
-      min-width: 52px;
+      min-width: 48px;
     }
     .cd-num {
       font-family: 'Playfair Display', serif;
@@ -555,7 +561,7 @@ Ein Versprechen
         <div class="iban-qr-wrap">
           <div class="iban-card" style="text-align:center; align-items:center; gap:0.9rem;">
             <p class="iban-label">Bitte bis 31. Mai 2026 ausfüllen</p>
-            <p style="font-family:'Jost',sans-serif; font-size:0.82rem; font-weight:300; color:rgba(242,232,212,0.65); line-height:1.7;">Zusage, Begleitung &amp; Essenspräferenzen</p>
+            <p style="font-family:'Jost',sans-serif; font-size:0.82rem; font-weight:300; color:rgba(242,232,212,0.82); line-height:1.7;">Zusage, Begleitung &amp; Essenspräferenzen</p>
             <a href="https://forms.gle/XkMVx8kWd39TEDrQ8" target="_blank" rel="noopener"
               style="display:inline-block; margin-top:0.4rem;
                      font-family:'Jost',sans-serif; font-size:0.7rem; font-weight:400;
@@ -676,25 +682,25 @@ Ein Versprechen
           <div class="hotel-stars">★★★★</div>
           <div class="hotel-name">Hotel Eggers</div>
           <div class="hotel-sub">Hamburg-Rahlstedt</div>
-          <span class="hotel-tel">040 / 675 780</span>
+          <span class="hotel-tel"><span class="hotel-arrow">↗︎</span>040 / 675 780</span>
         </a>
         <a class="hotel-card" href="https://www.hotel-zur-windmuehle.de/" target="_blank" rel="noopener">
           <div class="hotel-stars">★★★</div>
           <div class="hotel-name">Hotel zur Windmühle</div>
           <div class="hotel-sub">Stapelfeld</div>
-          <span class="hotel-tel">040 / 675 070</span>
+          <span class="hotel-tel"><span class="hotel-arrow">↗︎</span>040 / 675 070</span>
         </a>
         <a class="hotel-card" href="https://www.meiendorfer-park.de/" target="_blank" rel="noopener">
           <div class="hotel-stars">★★★</div>
           <div class="hotel-name">Hotel Meiendorfer Park</div>
           <div class="hotel-sub">Hamburg-Meiendorf</div>
-          <span class="hotel-tel">040 / 678 1718</span>
+          <span class="hotel-tel"><span class="hotel-arrow">↗︎</span>040 / 678 1718</span>
         </a>
         <a class="hotel-card" href="tel:015125884319">
           <div class="hotel-stars" style="color:var(--rose);">♡</div>
           <div class="hotel-name">Pension Krohn</div>
           <div class="hotel-sub">Privatunterkunft</div>
-          <span class="hotel-tel">0151 / 258 843 19</span>
+          <span class="hotel-tel"><span class="hotel-arrow">↗︎</span>0151 / 258 843 19</span>
         </a>
       </div>
     </div>
@@ -833,12 +839,13 @@ Ein Versprechen
 
     function highlightCurrent() {
       const now = new Date();
+      const isWeddingDay = now.getFullYear() === 2026 && now.getMonth() === 7 && now.getDate() === 1;
       const mins = now.getHours() * 60 + now.getMinutes();
       allRows.forEach((r, i) => {
         r.classList.remove('now-active');
         const old = r.querySelector('.now-badge');
         if (old) old.remove();
-        if (i < schedule.length) {
+        if (isWeddingDay && i < schedule.length) {
           const s = schedule[i];
           if (mins >= s.start && mins < s.end) {
             r.classList.add('now-active', 'in');
