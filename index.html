@@ -76,8 +76,8 @@
       background: rgba(184,146,42,0.22); color: var(--gold-hi);
     }
     @media (max-width: 480px) {
-      .toc { bottom: 1rem; padding: 0.45rem 0.6rem; gap: 0.15rem; }
-      .toc-item { font-size: 0.55rem; padding: 0.28rem 0.42rem; letter-spacing: 0.06em; }
+      .toc { bottom: 1rem; padding: 0.4rem 0.5rem; gap: 0.1rem; max-width: calc(100vw - 2rem); }
+      .toc-item { font-size: 0.5rem; padding: 0.25rem 0.32rem; letter-spacing: 0.04em; }
     }
 
     /* ── HERO ── */
@@ -520,14 +520,14 @@
       alt="Herrenhaus Höltigbaum Illustration" />
     <div class="hero-overlay"></div>
     <div class="hero-text">
-      <p class="hero-eyebrow">Wir heiraten</p>
+      <p class="hero-eyebrow">Wir heiraten!</p>
       <h1 class="hero-names">Kimberley <span class="amp">&</span> Jan</h1>
       <div class="hero-rule">
         <div class="rule-line"></div>
         <div class="rule-diamond"></div>
         <div class="rule-line"></div>
       </div>
-      <p class="hero-meta">01. August 2026 &nbsp;·&nbsp; Herrenhaus Höltigbaum</p>
+      <p class="hero-eyebrow">01. August 2026<br>Herrenhaus Höltigbaum</p>
       <div class="countdown-wrap" id="countdown">
         <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-label">Tage</span></div>
         <div class="cd-sep">·</div>
@@ -652,6 +652,15 @@ Ein Versprechen
           Sieker Landstraße 119<br>
           22143 Hamburg · Hamburg-Rahlstedt
         </p>
+        <p style="font-size:0.82rem; font-weight:300; line-height:1.85; color:rgba(242,232,212,0.72); max-width:480px; margin:1.8rem auto 0; letter-spacing:0.02em;">
+          Ein Ort mit Geschichte für unseren gemeinsamen Anfang. Das Herrenhaus Höltigbaum ist ein denkmalgeschütztes Gutshaus aus dem 18. Jahrhundert, eingebettet in den gleichnamigen Landschaftsschutzpark am östlichen Stadtrand Hamburgs. Wir freuen uns riesig darauf, hier mit euch die Korken knallen zu lassen und eine unvergessliche Party zu feiern!
+        </p>
+        <p style="margin-top:1.4rem; display:flex; justify-content:center; gap:1.4rem; flex-wrap:wrap;">
+          <a href="https://www.giffey.de/Locations/Herrenhaus-Hoeltigbaum" target="_blank" rel="noopener"
+             style="font-family:'Jost',sans-serif; font-size:0.65rem; font-weight:300; letter-spacing:0.2em; text-transform:uppercase; color:rgba(184,146,42,0.9); text-decoration:none; border-bottom:1px solid rgba(184,146,42,0.35); padding-bottom:2px; transition:color 0.2s;">Website &#x2197;</a>
+          <a href="https://de.wikipedia.org/wiki/Herrenhaus_H%C3%B6ltigbaum" target="_blank" rel="noopener"
+             style="font-family:'Jost',sans-serif; font-size:0.65rem; font-weight:300; letter-spacing:0.2em; text-transform:uppercase; color:rgba(184,146,42,0.9); text-decoration:none; border-bottom:1px solid rgba(184,146,42,0.35); padding-bottom:2px; transition:color 0.2s;">Wikipedia &#x2197;</a>
+        </p>
       </div>
     </div>
   </div>
@@ -660,7 +669,7 @@ Ein Versprechen
   <section class="couple-section">
     <div class="couple-inner">
       <div class="couple-text">
-        <h2 class="ttl">Danke, dass es euch gibt!</h2>
+        <h2 class="ttl">Wir freuen uns auf euch!</h2>
         <p class="couple-quote">Jeder Einzelne von euch gehört zu der Geschichte, die uns hierher geführt hat, und wir sind unendlich dankbar, euch in unserem Leben zu haben. Dass ihr diesen Tag mit uns feiert, bedeutet uns mehr, als Worte sagen können.</p>
       </div>
       <div class="couple-photo-wrap">
@@ -712,10 +721,12 @@ Ein Versprechen
       <div class="gifts-inner">
         <span class="lbl">Ein Wunsch von uns</span>
         <h2 class="ttl">Geschenke</h2>
-        <p class="gifts-text">Am meisten freuen wir uns über eure gute Laune und eure Anwesenheit! Wer uns eine Freude machen will, unterstützt uns am besten mit einem Beitrag zu den Kosten der Feier und unserer Hochzeitsreise. Vielen Dank!</p>
+        <p class="gifts-text">Am meisten freuen wir uns über eure Anwesenheit, aber wer uns darüber hinaus eine kleine Freude bereiten möchte: Wir sparen bereits fleißig auf unsere Feier und die Hochzeitsreise und freuen uns riesig über einen Beitrag. Ganz klassisch als Karte vor Ort oder für den sicheren Hafen per Überweisung auf unser Hochzeitskonto – wir danken euch von Herzen!
+        <br>
+        
         <div class="iban-qr-wrap">
           <div class="iban-card">
-            <p class="iban-label">Bankverbindung</p>
+            <p class="iban-label">Hochzeitskonto</p>
             <p class="iban-number">DE36 5001 0517 5817 0165 06</p>
             <p class="iban-meta">Kimberley Böse / Jan Traulsen &nbsp;·&nbsp; ING</p>
           </div>
@@ -740,7 +751,7 @@ Ein Versprechen
       <div class="note-item">
         <div class="note-icon">👗</div>
         <div class="note-body">
-          <div class="note-title">Dresscode: Cocktail &amp; Summer Chic</div>
+          <div class="note-title">Dresscode: Cocktail / Summer Chic</div>
           <div class="note-desc">Wir freuen uns über festliche Sommeroutfits — elegante Kleider, Hosenanzüge oder leichte Anzüge in hellen, sommerlichen Farben. Da wir auch den Garten nutzen, empfehlen sich flache Absätze oder Keilabsätze.<br><br>
             <em style="font-style:normal;">Bitte kein Weiß — das bleibt der Braut vorbehalten. ♡</span>
           </div>
@@ -763,7 +774,7 @@ Ein Versprechen
         <div class="note-icon">🅿️</div>
         <div class="note-body">
           <div class="note-title">Parken</div>
-          <div class="note-desc">Es gibt begrenzte Parkmöglichkeiten direkt bei der Location. Wir empfehlen, frühzeitig anzureisen oder Fahrgemeinschaften zu bilden.</div>
+          <div class="note-desc">Es sollte ausreichende Parkmöglichkeiten direkt bei der Location geben. Wir empfehlen, sicherheitshalber frühzeitig anzureisen.</div>
         </div>
       </div>
 
@@ -929,7 +940,13 @@ Ein Versprechen
     // ── COUNTDOWN ──
     function updateCountdown() {
       const target = new Date('2026-08-01T15:00:00');
+      const hide   = new Date('2026-08-02T09:00:00');
       const now = new Date();
+      if (now >= hide) {
+        const cdEl = document.getElementById('countdown');
+        if (cdEl) cdEl.style.display = 'none';
+        return;
+      }
       const diff = target - now;
       if (diff <= 0) {
         document.getElementById('countdown').innerHTML = '<p class="countdown-done">Es ist soweit!</p>';
