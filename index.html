@@ -485,7 +485,7 @@
     <a class="toc-item" href="#location">Location</a>
     <a class="toc-item" href="#hotels">Hotels</a>
     <a class="toc-item" href="#geschenke">Geschenke</a>
-    <a class="toc-item" href="#hinweise">Hinweise</a>
+    <a class="toc-item" href="#infos">Infos</a>
     <a class="toc-item" href="#gruss">Gruss</a>
   </nav>
 
@@ -715,11 +715,11 @@ Ein Versprechen
   </div>
 
   <!-- NOTES -->
-  <section class="section-parchment" id="hinweise">
+  <section class="section-parchment" id="infos">
     <div class="section-inner">
       <div class="section-header">
         <span class="lbl" style="color:var(--gold);">Good to know</span>
-        <h2 class="ttl" style="color:var(--ink);">Hinweise</h2>
+        <h2 class="ttl" style="color:var(--ink);">Informationen & Hinweise</h2>
         <div class="ttl-rule"></div>
       </div>
 
@@ -727,10 +727,37 @@ Ein Versprechen
         <div class="note-icon">👗</div>
         <div class="note-body">
           <div class="note-title">Dresscode: Cocktail / Summer Chic & Airy</div>
-          <div class="note-desc">Kommt gerne in festlicher, aber sommerlich-leichter Garderobe. Für die Damen bieten sich luftige Kleider, Röcke oder schicke Jumpsuits an. Die Herren dürfen den schweren Anzug gerne gegen einen Sommer-Anzug, z. B. Leinen, tauschen. Fliegen und Krawatten sind optional. Wer sich passend zur Location und der Dekoration anziehen möchte, kann gerne auf Erdtöne zurückgreifen.
+          <div class="note-desc">Kommt gerne in festlicher und schicker, aber sommerlich-leichter Garderobe. Für die Damen bieten sich luftige Kleider, Röcke oder schicke Jumpsuits an. Die Herren dürfen den schweren Anzug gerne gegen einen Sommer-Anzug, z. B. Leinen, tauschen. Fliegen und Krawatten sind optional. Wer sich passend zur Location und der Dekoration anziehen möchte, kann gerne auf Erdtöne zurückgreifen.
           <br>Hauptsache, ihr fühlt euch wohl und seid bereit für die Tanzfläche!
           <br><br>Nur die Farbe Weiß überlassen wir traditionell der Braut ♡<br>
           </div>
+        </div>
+      </div>
+
+      <div class="note-item">
+        <div class="note-icon">👶</div>
+        <div class="note-body">
+          <div class="note-title">Kinder willkommen</div>
+          <div class="note-desc">Kinder bis 4 Jahre sind herzlich willkommen. Kinderstühle sind vorhanden.</div>
+        </div>
+      </div>
+
+      <div class="note-item">
+        <div class="note-icon">🎤</div>
+        <div class="note-body">
+          <div class="note-title">Programmbeiträge</div>
+          <div class="note-desc">Ihr möchtet etwas zum Programm beitragen? Meldet euch bitte vorab bei unseren Trauzeugen:<br><br>
+            <a href="tel:+4915785568053">Chelsea Liang &nbsp;·&nbsp; +49 157 855 680 53</a><br>
+            <a href="tel:+4917649249095">Manuel Zeiser &nbsp;·&nbsp; +49 176 492 490 95</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="note-item">
+        <div class="note-icon">🅿️</div>
+        <div class="note-body">
+          <div class="note-title">Parken</div>
+          <div class="note-desc">Es sollte ausreichende Parkmöglichkeiten direkt bei der Location geben. Wir empfehlen, sicherheitshalber frühzeitig anzureisen.</div>
         </div>
       </div>
 
@@ -747,22 +774,6 @@ Ein Versprechen
       </div>
 
       <div class="note-item">
-        <div class="note-icon">🅿️</div>
-        <div class="note-body">
-          <div class="note-title">Parken</div>
-          <div class="note-desc">Es sollte ausreichende Parkmöglichkeiten direkt bei der Location geben. Wir empfehlen, sicherheitshalber frühzeitig anzureisen.</div>
-        </div>
-      </div>
-
-      <div class="note-item">
-        <div class="note-icon">👶</div>
-        <div class="note-body">
-          <div class="note-title">Kinder willkommen</div>
-          <div class="note-desc">Kinder bis 4 Jahre sind herzlich willkommen. Kinderstühle sind vorhanden.</div>
-        </div>
-      </div>
-
-      <div class="note-item">
         <div class="note-icon">📷</div>
         <div class="note-body">
           <div class="note-title">Fotos &amp; Videos</div>
@@ -774,17 +785,6 @@ Ein Versprechen
               </span>
             </span>
             <br>Die offiziellen Fotos werden im Nachgang separat bereitgestellt.
-          </div>
-        </div>
-      </div>
-
-      <div class="note-item">
-        <div class="note-icon">🎤</div>
-        <div class="note-body">
-          <div class="note-title">Programmbeiträge</div>
-          <div class="note-desc">Ihr möchtet etwas zum Programm beitragen? Meldet euch bitte vorab bei unseren Trauzeugen:<br><br>
-            <a href="tel:+4915785568053">Chelsea Liang &nbsp;·&nbsp; +49 157 855 680 53</a><br>
-            <a href="tel:+4917649249095">Manuel Zeiser &nbsp;·&nbsp; +49 176 492 490 95</a>
           </div>
         </div>
       </div>
@@ -868,7 +868,7 @@ Ein Versprechen
 
     // Floating nav visibility
     const toc = document.getElementById('toc');
-    const sections = ['hero','umfrage','ablauf','location','hotels','geschenke','hinweise','gruss'];
+    const sections = ['hero','umfrage','ablauf','location','hotels','geschenke','infos','gruss'];
     const tocItems = toc.querySelectorAll('.toc-item');
     const heroEl = document.getElementById('hero');
     new IntersectionObserver(([e]) => {
